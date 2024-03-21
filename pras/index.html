@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style1.css" rel="stylesheet"/>
+    <title>cuyUniversity SESI-6</title>
+</head>
+<body class="dark">
+    <div class="container">
+      <nav>
+        <a href="/">HOME</a>
+        <a onclick="darkmode()">MODE</a>
+      </nav>
+      <h1>SESI 6 CUY UNIVERSITY</h1>
+    </div>
+    
+    <!-- initializing function script -->
+    <script>
+      let body = document.body;
+
+      const darkLimit = 5;
+      let darkCounter = 0;
+
+      function darkMode() {
+        darkCounter += 1;
+        if(darkCounter == darkLimit){
+          console.log('jatah dark mode anda habis')
+          return;
+        }
+        console.log('dark mode di klik sebanyak: ', darkCounter);
+        body.classList.toggle("dark");
+      }
+    </script>
+  </body>
+</html>
